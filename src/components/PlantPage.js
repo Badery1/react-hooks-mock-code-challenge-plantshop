@@ -13,6 +13,7 @@ function PlantPage() {
       .then((data) => setPlants(data))
       .catch((error) => console.error("Error:", error));
   }, []);
+
   const handleRemovePlant = (plantId) => {
     fetch(`http://localhost:6001/plants/${plantId}`, {
       method: "DELETE",
